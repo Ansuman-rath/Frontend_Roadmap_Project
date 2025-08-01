@@ -4,4 +4,5 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 
 ## Projects List
 
-[Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
+[Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),\
+[Flash Cards](https://roadmap.sh/projects/flash-cards)
