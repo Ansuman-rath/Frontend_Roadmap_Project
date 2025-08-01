@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flash Cards</h1>
+            <div class="subtitle">Master JavaScript Concepts</div>
+        </header>
+        
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">25%</span>
+        </div>
+        
+        <div class="card-counter" id="cardCounter">5 of 20</div>
+        
+        <main class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="card-content" id="cardContent">
+                    <!-- Card content will be dynamically populated -->
+                </div>
+                <button class="flip-button" id="flipButton">Show Answer</button>
+            </div>
+        </main>
+        
+        <nav class="navigation">
+            <button class="nav-button" id="prevButton">&lt; Previous</button>
+            <button class="nav-button" id="nextButton">Next &gt;</button>
+        </nav>
+        
+        <!-- Additional interactive elements -->
+        <div class="controls-section">
+            <button class="control-button" id="firstButton" title="Go to first card">⏮</button>
+            <button class="control-button" id="lastButton" title="Go to last card">⏭</button>
+            <button class="control-button" id="helpButton" title="Keyboard shortcuts">⌨</button>
+        </div>
+        
+        <!-- Help modal -->
+        <div class="modal" id="helpModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Keyboard Shortcuts</h3>
+                    <button class="close-button" id="closeHelp">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="shortcut-item">
+                        <span class="key">←</span>
+                        <span class="description">Previous card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">→</span>
+                        <span class="description">Next card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">Space</span>
+                        <span class="description">Flip card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">Enter</span>
+                        <span class="description">Flip card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">Home</span>
+                        <span class="description">First card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">End</span>
+                        <span class="description">Last card</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Completion message -->
+        <div class="completion-message" id="completionMessage">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've completed all the flashcards!</p>
+            <button class="restart-button" id="restartButton">Start Over</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
