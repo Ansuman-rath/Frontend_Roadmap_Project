@@ -1,2 +1,7 @@
-# Roadmap_Project
-Projects undertaken in Roadmap.sh
+# Front-end Projects from Roadmap.sh
+
+This repository contains projects built following the [roadmap.sh](https://roadmap.sh/) developer path.
+
+## Projects List
+
+[Basic HTML Website](https://roadmap.sh/projects/basic-html-website)
