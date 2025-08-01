@@ -6,3 +6,6 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 
 [Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),\
 [Flash Cards](https://roadmap.sh/projects/flash-cards)
+
+Click any of the images below to view the readme and live demo of the project.
+
