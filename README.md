@@ -5,7 +5,7 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 ## Projects List
 
 [Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),\
-[Flash Cards](https://roadmap.sh/projects/flash-cards)
+[Flash Cards](https://roadmap.sh/projects/flash-cards), [Github Random Repository](https://roadmap.sh/projects/github-random-repo)
 
-Click any of the images below to view the readme and live demo of the project.
+
 
