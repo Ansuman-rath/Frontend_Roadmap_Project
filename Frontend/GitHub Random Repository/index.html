@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fas fa-square"></i>
+                GitHub Repository Finder
+            </h1>
+        </header>
+        
+        <main>
+            <div class="language-selector">
+                <label for="language-select">Select a Language</label>
+                <select id="language-select">
+                    <option value="">Choose a language...</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="c++">C++</option>
+                    <option value="c#">C#</option>
+                    <option value="php">PHP</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="go">Go</option>
+                    <option value="rust">Rust</option>
+                    <option value="swift">Swift</option>
+                    <option value="kotlin">Kotlin</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="scala">Scala</option>
+                    <option value="r">R</option>
+                    <option value="matlab">MATLAB</option>
+                    <option value="perl">Perl</option>
+                    <option value="shell">Shell</option>
+                </select>
+            </div>
+
+            <div class="content-area">
+                <!-- Empty State -->
+                <div id="empty-state" class="state-message">
+                    <p>Please select a language</p>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-state" class="state-message loading" style="display: none;">
+                    <p>Loading, please wait..</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="error-state" class="state-message error" style="display: none;">
+                    <p>Error fetching repositories</p>
+                    <button id="retry-btn" class="retry-btn">Click to retry</button>
+                </div>
+
+                <!-- Repository Display -->
+                <div id="repository-display" class="repository-card" style="display: none;">
+                    <div class="repo-header">
+                        <h3 id="repo-name"></h3>
+                        <p id="repo-description"></p>
+                    </div>
+                    <div class="repo-stats">
+                        <div class="stat">
+                            <i class="fas fa-circle"></i>
+                            <span id="repo-language"></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span id="repo-stars"></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code-branch"></i>
+                            <span id="repo-forks"></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span id="repo-issues"></span>
+                        </div>
+                    </div>
+                    <button id="refresh-btn" class="refresh-btn">Refresh</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f6f8fa;
+    color: #24292e;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header h1 i {
+    color: #24292e;
+    font-size: 1.5rem;
+}
+
+.language-selector {
+    margin-bottom: 2rem;
+}
+
+.language-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #24292e;
+}
+
+#language-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #24292e;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+#language-select:focus {
+    outline: none;
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+.content-area {
+    min-height: 200px;
+}
+
+.state-message {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    color: #586069;
+}
+
+.state-message p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.state-message.loading p {
+    color: #0366d6;
+    font-weight: 500;
+}
+
+.state-message.error {
+    background-color: #fff5f5;
+    border-color: #fed7d7;
+}
+
+.state-message.error p {
+    color: #c53030;
+    font-weight: 500;
+}
+
+.retry-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.retry-btn:hover {
+    background-color: #c82333;
+}
+
+.repository-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.repo-header {
+    margin-bottom: 1.5rem;
+}
+
+.repo-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #24292e;
+    margin-bottom: 0.5rem;
+}
+
+.repo-header p {
+    color: #586069;
+    line-height: 1.5;
+}
+
+.repo-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #586069;
+    font-size: 0.9rem;
+}
+
+.stat i {
+    font-size: 0.8rem;
+}
+
+.stat i.fa-circle {
+    color: #f1e05a;
+}
+
+.stat i.fa-star {
+    color: #f6e05a;
+}
+
+.stat i.fa-code-branch {
+    color: #6f42c1;
+}
+
+.stat i.fa-exclamation-circle {
+    color: #e36209;
+}
+
+.refresh-btn {
+    background-color: #24292e;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.refresh-btn:hover {
+    background-color: #1b1f23;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .repo-stats {
+        gap: 1rem;
+    }
+    
+    .stat {
+        font-size: 0.85rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading p {
+    animation: pulse 1.5s ease-in-out infinite;
+} 
