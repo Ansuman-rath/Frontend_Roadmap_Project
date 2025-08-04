@@ -12,8 +12,8 @@ This repository contains projects built following the [roadmap.sh](https://roadm
   <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/Personal%20Portfolio'>
     <img width="48%" src="Assets/Screenshot (11).png" alt="Personal Portfolio" />
   </a>
-  <a href='/Frontend Projects/02-basic-html-website/'>
-    <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
+  <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/FlashCards'>
+    <img width="48%" src="Assets/Screenshot (12).png" alt="Flash Cards" />
   </a>
 </p>
 
