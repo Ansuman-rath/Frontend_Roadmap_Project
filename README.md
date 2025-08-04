@@ -6,7 +6,7 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 
 [Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),\
 [Flash Cards](https://roadmap.sh/projects/flash-cards), [Github Random Repository](https://roadmap.sh/projects/github-random-repo),\
-[Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer)
+[Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer),[Weather App](https://roadmap.sh/projects/weather-app)
 
 
 
