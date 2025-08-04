@@ -8,6 +8,8 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 [Flash Cards](https://roadmap.sh/projects/flash-cards), [Github Random Repository](https://roadmap.sh/projects/github-random-repo),\
 [Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer),[Weather App](https://roadmap.sh/projects/weather-app)
 
+Click any of the images below to view the readme and live demo of the project.
+
 <p align="left">
   <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/Personal%20Portfolio'>
     <img width="48%" src="Assets/Screenshot (11).png" alt="Personal Portfolio" />
@@ -18,11 +20,11 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 </p>
 
 <p align="left">
-  <a href='/Frontend Projects/03-personal-portfolio/'>
-    <img width="48%" src="./assets/images/personal-portfolio.png" alt="personal portfolio" />
+  <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/GitHub%20Random%20Repository'>
+    <img width="48%" src="Assets/Screenshot (13).png" />
   </a>
-  <a href='/Frontend Projects/04-changelog-component/'>
-    <img width="48%" src="./assets/images/changelog-component.png" alt="changelog component" />
+  <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/Pomodoro%20Timer'>
+    <img width="48%" src="Assets/Screenshot (14).png" />
   </a>
 </p>
 
