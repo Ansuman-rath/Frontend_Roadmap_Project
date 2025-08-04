@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <head>
+        <title>Pomodoro Timer</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: rgb(25, 25, 25);
+                color: white;
+            }
+            .title {
+                font-size: 50px;
+                margin-top: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+            }
+            .timer-display {
+                font-size: 100px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            button {
+                padding: 10px 20px;
+                size: 100px;
+                border: none;
+                font-size: 1em;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .start-button {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .reset-button {
+                background-color: #f44336;
+                color: white;
+            }
+            .five-mins, .fifteen-mins {
+                background-color: #2196F3;
+                color: white;
+            }
+            .five-mins, .fifteen-mins {
+                margin-top: 10px;
+            }
+            .five-mins:hover, .fifteen-mins:hover, .start-button:hover, .reset-button:hover, .break-button:hover, .long-break-button:hover {
+                opacity: 0.8;
+            }
+            .five-mins, .fifteen-mins, .start-button, .reset-button, .break-button, .long-break-button {
+                font-weight: bold;
+            }
+            .five-mins, .fifteen-mins, .start-button, .reset-button, .break-button, .long-break-button {
+                border-radius: 5px;
+            }
+            .break-button, .long-break-button {
+                background-color: #FF9800;
+                color: white;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            
+
+
+
+
+
+        </style>
+    
+    </head>
+    <body>
+        <div class="title">Pomodoro Timer</div>
+        <div class="timer-display">25:00</div>
+        <button class="start-button">Start</button>
+        <button class="reset-button">Reset</button>
+        <button class="five-mins">+5 Minutes</button>
+        <button class="fifteen-mins">+15 Minutes</button>
+        <button class="break-button">Break</button>
+        <button class="long-break-button">Long Break</button>
+
+        <script>
+            let timer;
+            let isRunning = false;
+            let timeLeft = 1500; 
+            let breakTime1 = 300;
+            let breakTime2 = 900;
+
+
+            const timerDisplay = document.querySelector('.timer-display');
+            const startButton = document.querySelector('.start-button');
+            const resetButton = document.querySelector('.reset-button');
+            const addFiveMinutesButton = document.querySelector('.five-mins');
+            const addFifteenMinutesButton = document.querySelector('.fifteen-mins');
+            const breakButton = document.querySelector('.break-button');
+            const longBreakButton = document.querySelector('.long-break-button');
+
+
+            function updateDisplay() {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
+
+            function startTimer() {
+                if (isRunning) return;
+                isRunning = true;
+                timer = setInterval(() => {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(timer);
+                        isRunning = false;
+                    }
+                }, 1000);
+            }
+
+            function resetTimer() {
+                clearInterval(timer);
+                isRunning = false;
+                timeLeft = 1500; 
+                updateDisplay();
+            }
+
+            function addFiveMinutes() {
+                timeLeft += 300; 
+                updateDisplay();
+            }
+
+            function addFifteenMinutes() {
+                timeLeft += 900; 
+                updateDisplay();
+            }
+
+            function startBreak() {
+                clearInterval(timer);
+                isRunning = false;
+                timeLeft = breakTime1; 
+                updateDisplay();
+                startTimer();
+            }
+            function startLongBreak() {
+                clearInterval(timer);
+                isRunning = false;
+                timeLeft = breakTime2; 
+                updateDisplay();
+                startTimer();
+            }
+
+
+            startButton.addEventListener('click', startTimer);
+            resetButton.addEventListener('click', resetTimer);
+            addFiveMinutesButton.addEventListener('click', addFiveMinutes);
+            addFifteenMinutesButton.addEventListener('click', addFifteenMinutes);
+            breakButton.addEventListener('click', startBreak);
+            longBreakButton.addEventListener('click', startLongBreak);
+            
+
+            updateDisplay(); 
+        </script>
