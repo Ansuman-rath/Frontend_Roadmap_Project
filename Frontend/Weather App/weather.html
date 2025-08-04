@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(25, 25, 25);
+            color: white;
+            
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-size: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            color: black;
+            background-color: aqua;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+
+        @keyframes fadeScaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #output {
+            display: none; 
+            margin-top: 20px;
+            margin: 20px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: fadeScaleIn 0.7s cubic-bezier(.4,2,.3,1) forwards;
+            transition: box-shadow 0.3s;
+            box-shadow: 0 0 30px 0 rgba(0,255,255,0.2);
+            border-radius: 16px;
+            background: rgba(0, 255, 255, 0.07);
+        }
+        #output img {
+            width: 80px;
+            height: 80px;
+        }
+        #output strong {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        #output p {
+            font-size: 18px;
+        }
+        .hourly-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hourly-section {
+            background: rgba(0,255,255,0.08);
+            border-radius: 12px;
+            padding: 16px;
+            min-width: 220px;
+            box-shadow: 0 0 10px 0 rgba(0,255,255,0.08);
+            color: #fff;
+            font-size: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .hourly-section strong {
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .hourly-section div {
+            margin-bottom: 3px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding-bottom: 2px;
+        }
+        
+
+
+
+ 
+    </style>
+
+</head>
+<body>
+    <h1>Weather App</h1>
+    <p>Check the weather in your city!</p>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Fetch</button>
+    <div id="output"></div>
+
+<script>
+    async function getWeather(){
+        const city = document.getElementById('cityInput').value;
+        const apiKey = 'WRST2V4TNRCL8WH995GCWYR7D';
+        const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${apiKey}&contentType=json`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.error) {
+                document.getElementById('output').innerText = 'Error: ' + data.error.message;
+                return;
+            }
+
+            const current = data.currentConditions;
+            const location = data.resolvedAddress;
+            const desc = data.description;
+            const iconUrl  = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${current.icon}.png`;
+            const hours = data.days[0].hours;
+
+            
+            const now = new Date();
+            const currentHour = now.getHours();
+
+            
+            let prevHoursHtml = '<strong>Previous 12 Hours</strong><br>';
+            for (let i = currentHour - 12; i < currentHour; i++) {
+                if (i >= 0 && hours[i]) {
+                    prevHoursHtml += `
+                        <div>
+                            ${hours[i].datetime}: ${hours[i].temp}°F
+                        </div>
+                    `;
+                } else {
+                    prevHoursHtml += `
+                        <div>
+                            N/A
+                        </div>
+                    `;
+                }
+            }
+
+            let nextHoursHtml = '<strong>Next 12 Hours</strong><br>';
+            for (let i = currentHour; i < currentHour + 12; i++) {
+                if (i < hours.length && hours[i]) {
+                    nextHoursHtml += `
+                        <div>
+                            ${hours[i].datetime}: ${hours[i].temp}°F
+                        </div>
+                    `;
+                } else {
+                    nextHoursHtml += `
+                        <div>
+                            N/A
+                        </div>
+                    `;
+                }
+            }
+
+            document.getElementById('output').innerHTML = `
+                <strong>${location}</strong><br>
+                <img src="${iconUrl}" alt="Weather Icon"><br>
+                Temperature: ${current.temp} °F<br>
+                Feels like: ${current.feelslike} °F<br>
+                Condition: ${current.conditions}<br>
+                Wind: ${current.windspeed} km/h<br>
+                Humidity: ${current.humidity}%<br>
+                Description: ${desc}<br>
+                <hr>
+                <div class="hourly-container">
+                    <div class="hourly-section">${prevHoursHtml}</div>
+                    <div class="hourly-section">${nextHoursHtml}</div>
+                </div>
+            `;
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.style.animation = 'none';
+            void outputDiv.offsetWidth; 
+            outputDiv.style.animation = 'fadeScaleIn 0.7s cubic-bezier(.4,2,.3,1) forwards';
+            outputDiv.style.display = 'block'; 
+        } catch (error) {
+            console.error(error);
+            document.getElementById('output').innerText = 'Could not fetch weather data.';
+        }
+    }
+</script>
+
+
+</body>
