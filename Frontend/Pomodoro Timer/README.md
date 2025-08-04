@@ -1,6 +1,6 @@
 # Pomodoro Timer
 
-![Pomodoro Timer](./Screenshot pt.png)
+![Pomodoro Timer](./Screenshot_pt.png)
 
 ## Goal
 
