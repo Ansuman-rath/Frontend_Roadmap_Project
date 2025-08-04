@@ -8,7 +8,6 @@ The goal of this project is to learn and practice frontend development skills by
 
 
 ## Requirements
-You are required to develop a flash cards app with the following features:
 
 - [X] Use HTML, CSS, and JavaScript (or a frontend framework/library such as React, Vue, or Angular).
 - [X] Implement state management for the timer and session tracking.
