@@ -16,3 +16,5 @@ The application should handle loading, empty, and error states effectively. Afte
 This project will help you practice API integration, managing asynchronous data, and enhancing user experience with responsive UI states.
 
 [Github Random Repository](https://roadmap.sh/projects/github-random-repo)
+
+https://roadmap-project-deps.vercel.app/
