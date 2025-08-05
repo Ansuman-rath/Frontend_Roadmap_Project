@@ -2,6 +2,8 @@
 
 A client-side Stories feature similar to Instagram and WhatsApp, built with vanilla HTML, CSS, and JavaScript.
 
+![Stories](./Screenshot_24.png)
+
 ## Features
 
 - **Add Stories**: Click the plus button to upload images
@@ -107,4 +109,5 @@ You can easily customize the application by modifying:
 - Client-side only - no server communication
 - File validation prevents malicious uploads
 - Local storage limits prevent excessive data usage
+
 - No external dependencies or libraries required 
