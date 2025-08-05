@@ -6,7 +6,8 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 
 [Basic HTML Website](https://roadmap.sh/projects/basic-html-website), [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),\
 [Flash Cards](https://roadmap.sh/projects/flash-cards), [Github Random Repository](https://roadmap.sh/projects/github-random-repo),\
-[Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer),[Weather App](https://roadmap.sh/projects/weather-app)
+[Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer),[Weather App](https://roadmap.sh/projects/weather-app),\
+[24 Hour Story](https://roadmap.sh/projects/stories-feature)
 
 Click any of the images below to view the readme and live demo of the project.
 
@@ -32,6 +33,10 @@ Click any of the images below to view the readme and live demo of the project.
   <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/Weather%20App'>
     <img width="48%" src="Assets/Screenshot (15).png" />
   </a>
+  <a href='https://github.com/Ansuman-rath/Roadmap_Project/tree/main/Frontend/24%20hour%20story'>
+    <img width="48%" src="Assets/Screenshot (16).png" />
+  </a>
+</p>
   
 </p>
 
