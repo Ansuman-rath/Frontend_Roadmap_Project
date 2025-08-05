@@ -1,6 +1,6 @@
 # Front-end Projects from Roadmap.sh
 
-This repository contains projects built following the [roadmap.sh](https://roadmap.sh/) developer path.
+This repository contains front-end projects built following the [roadmap.sh](https://roadmap.sh/) developer path.
 
 ## Projects List
 
