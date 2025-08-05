@@ -112,5 +112,8 @@ You can easily customize the application by modifying:
 - File validation prevents malicious uploads
 - Local storage limits prevent excessive data usage
 
-- No external dependencies or libraries required 
+- No external dependencies or libraries required
+  
+[24 Hour Story](https://roadmap.sh/projects/stories-feature)
+
 
