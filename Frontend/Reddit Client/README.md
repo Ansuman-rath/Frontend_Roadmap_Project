@@ -1,6 +1,6 @@
 # Reddit Client 
 
-
+![Reddit Client](./Screenshot_rc.png)
 
 [Reddit Client](https://roadmap.sh/projects/reddit-client)
 
@@ -128,3 +128,4 @@ The application uses CSS modules and custom CSS properties for easy theming:
 - **New Post Types**: Extend the `RedditPost` interface in `types/reddit.ts`
 - **Additional Actions**: Add new menu items in `SubredditLane.tsx`
 - **Enhanced UI**: Modify component stylesheets for visual improvements
+
