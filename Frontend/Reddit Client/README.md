@@ -1,4 +1,8 @@
-# Reddit Client - Multi-Lane
+# Reddit Client 
+
+
+
+[Reddit Client](https://roadmap.sh/projects/reddit-client)
 
 A modern, responsive Reddit client built with React and TypeScript that allows users to view multiple subreddits in separate, customizable lanes.
 
@@ -124,28 +128,3 @@ The application uses CSS modules and custom CSS properties for easy theming:
 - **New Post Types**: Extend the `RedditPost` interface in `types/reddit.ts`
 - **Additional Actions**: Add new menu items in `SubredditLane.tsx`
 - **Enhanced UI**: Modify component stylesheets for visual improvements
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Reddit for providing the public JSON API
-- React team for the excellent framework
-- Vite team for the fast build tool 
