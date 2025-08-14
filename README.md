@@ -11,7 +11,8 @@ This repository contains front-end projects built following the [roadmap.sh](htt
 [Pomodoro Timer](https://roadmap.sh/projects/pomodoro-timer)\
 [Weather App](https://roadmap.sh/projects/weather-app)\
 [24 Hour Story](https://roadmap.sh/projects/stories-feature)\
-[Reddit Client](https://roadmap.sh/projects/reddit-client)
+[Reddit Client](https://roadmap.sh/projects/reddit-client)\
+[Task Tracker](https://roadmap.sh/projects/task-tracker-js)
 
 Click any of the images below to view the readme and live demo of the project.
 
