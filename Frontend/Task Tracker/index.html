@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Tracker</h1>
+        
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Start writing and press enter to create task"
+                maxlength="100"
+            >
+            <button id="addTaskBtn" class="add-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="tasks-container">
+            <ul id="tasksList" class="tasks-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+        
+        <div class="stats">
+            <span id="pendingCount">0 pending</span>
+            <span id="completedCount">0 completed</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
