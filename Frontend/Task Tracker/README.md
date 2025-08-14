@@ -1,6 +1,9 @@
 # Task Tracker
 
-A modern, responsive task tracking application built with vanilla JavaScript, HTML, and CSS.
+A modern, responsive task tracking application built with JavaScript, HTML, and CSS.
+
+![Task Tracker](./Screenshot_tt.png)
+[Task Tracker](https://roadmap.sh/projects/task-tracker-js)
 
 ## Features
 
@@ -54,3 +57,4 @@ Your tasks are automatically saved in your browser's localStorage, so they'll pe
 ## Getting Started
 
 Simply open `index.html` in any modern web browser to start using the Task Tracker!
+
